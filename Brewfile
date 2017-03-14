@@ -27,8 +27,6 @@ brew 'node'
 brew 'npm'
 brew 'phantomjs'
 
-cask 'tunnelblick'
-cask 'utc-menu-clock'
 cask 'virtualbox'
 
 cask 'google-chrome'
@@ -38,3 +36,4 @@ cask 'flux'
 cask 'slack'
 cask 'spotify'
 cask 'vlc'
+cask 'yujitach-menumeters'
