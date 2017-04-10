@@ -15,8 +15,8 @@ local function module_init()
         Y = "top_left",
         C = "middle_three_forths",
         U = "top_right",
-        B = "bottom_right",
-        N= "bottom_left"
+        B = "bottom_left",
+        N = "bottom_right"
     })
 
     for key, position_string in pairs(keys) do
