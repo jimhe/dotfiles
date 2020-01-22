@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# This hook is for tracking local commit metrics.
+HOOK=/export/content/linkedin/bin/git-local-commit-hook
+
+# Execute the hook in the background with any arguments (post-rewrite), and send any output to /dev/null.
+if [[ -x "${HOOK}" ]]; then
+    "${HOOK}" "$@" 2>&1 1>/dev/null &
+fi

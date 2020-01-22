@@ -27,6 +27,12 @@ fail () {
   exit
 }
 
+setup_githooks () {
+  info 'setup githooks'
+  git config --global core.hooksPath "$DOTFILES_ROOT/git/hooks"
+  success 'githooks'
+}
+
 setup_gitconfig () {
   if ! [ -f git/gitconfig.local.symlink ]
   then
@@ -133,6 +139,7 @@ install_dotfiles () {
 }
 
 setup_gitconfig
+setup_githooks
 install_dotfiles
 
 # If we're on a Mac, let's install and setup homebrew.

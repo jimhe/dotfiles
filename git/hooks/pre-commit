@@ -1,0 +1,8 @@
+#!/bin/bash
+
+LIST=`git diff-index --cached --diff-filter=d --name-only HEAD | grep -e "\.java$"`
+if [[ -n "$LIST" ]]; then
+  mint format
+  git add $LIST
+  mint stylecheck
+fi
